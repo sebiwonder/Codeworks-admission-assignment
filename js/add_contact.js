@@ -83,11 +83,12 @@ function required() {
 // add new contact to the contact book
 function displayContact(firstName, lastName, phone, address) {
   const index = $("div.card").length;
+  const name = firstName.concat(" ", lastName);
   const contact = `
     <div class="card" id="contact-${index}">
-      <h4 class="name">${firstName.concat(" ", lastName)}</h4>
-      <p class="phone">${phone}</p>
-      <p class="address">${address}</p>
+      <h4 class="name" id="name-${index}">${name}</h4>
+      <p class="phone" id="phone-${index}">${phone}</p>
+      <p class="address" id="address-${index}">${address}</p>
       <p onclick="remove(${index})"><i class="fa fa-trash"> Remove</i></a>
     </div>`;
   console.log(index);

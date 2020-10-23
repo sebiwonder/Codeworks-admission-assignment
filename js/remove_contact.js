@@ -1,11 +1,10 @@
 function remove(index) {
-  const name = $("h4.name")[index].innerHTML;
+  const name = $(`#name-${index}`)[0].innerHTML;
   const confirmRemove = confirm(
-    `Do you want to remove ${name} from you contact?`
+    `Do you want to remove ${name} from your contact?`
   );
   if (confirmRemove) {
     const contact = `#contact-${index}`;
-    console.log(index);
     $(contact).remove();
   }
 }
