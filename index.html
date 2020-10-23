@@ -10,38 +10,46 @@
 
   <body>
     <h1>Welcome to Thai's address book</h1>
+
     <!--Navigation button-->
-    <p>All</p>
-    <p>Add</p>
-    <p>Search</p>
+    <p onclick="navigate('all')" class="all fa fa-user">&nbsp;All</p>
+    <p onclick="navigate('add')" class="add fa fa-plus">&nbsp;Add</p>
+    <p onclick="navigate('search')" class="search fa fa-search">&nbsp;Search</p>
 
     <!--Content that is dynamically displayed-->
-    <h3 id="contact">--- Your current contacts ---</h3>
+    <div class="section" id="all">
+      <h3 id="contact">--- Your current contacts ---</h3>
+    </div>
 
-    <h3>--- Create a new contact ---</h3>
-    <form action="">
-      <label for="firstName" class="firstName">First name</label><br />
-      <input type="text" name="firstName" id="firstName" /><br />
+    <div class="section" id="add">
+      <h3>--- Create a new contact ---</h3>
+      <form action="">
+        <label for="firstName" class="firstName">First name</label><br />
+        <input type="text" name="firstName" id="firstName" /><br />
 
-      <label for="lastName" class="lastName">Last name</label><br />
-      <input type="text" name="lastName" id="lastName" /><br />
+        <label for="lastName" class="lastName">Last name</label><br />
+        <input type="text" name="lastName" id="lastName" /><br />
 
-      <label for="phone" class="phone">Phone number</label><br />
-      <input type="number" name="phone" id="phone" /><br />
+        <label for="phone" class="phone">Phone number</label><br />
+        <input type="number" name="phone" id="phone" /><br />
 
-      <label for="address" class="address">Address</label><br />
-      <input type="text" name="address" id="address" /><br />
-    </form>
-    <button onclick="addContact()" id="add">Create new contact</button>
+        <label for="address" class="address">Address</label><br />
+        <input type="text" name="address" id="address" /><br />
+      </form>
+      <button onclick="addContact()" id="add">Create new contact</button>
+    </div>
 
-    <h3>--- Search for a contact ---</h3>
-    <form action="">
-      <label for="name">Search by first name and/or last name</label><br />
-      <input type="text" name="name" id="name" /><br />
-    </form>
-    <button onclick="search()" id="search">Search</button>
+    <div class="section" id="search">
+      <h3>--- Search for a contact ---</h3>
+      <form action="">
+        <label for="name">Search by first name and/or last name</label><br />
+        <input type="text" name="name" id="name" /><br />
+      </form>
+      <button onclick="search()" id="search">Search</button>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="js/add_contact.js"></script>
     <script src="js/remove_contact.js"></script>
     <script src="js/search.js"></script>
