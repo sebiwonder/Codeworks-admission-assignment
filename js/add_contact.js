@@ -5,8 +5,8 @@ function addContact() {
   const address = $("#address")[0].value;
 
   const readyToSubmit = validateInput(firstName, lastName, phone, address);
-
-  if (readyToSubmit && confirm("Do you want to create a new contact?")) {
+  const confirmAdd = confirm("Do you want to create a new contact?");
+  if (readyToSubmit && confirmAdd) {
     // if successfully submit clear box and display notification
     alert("Create a new contact successfully!");
 
@@ -82,12 +82,15 @@ function required() {
 
 // add new contact to the contact book
 function displayContact(firstName, lastName, phone, address) {
+  const index = $("div.card").length;
   const contact = `
-    <div class="card">
+    <div class="card" id="contact-${index}">
       <h4 class="name">${firstName.concat(" ", lastName)}</h4>
       <p class="phone">${phone}</p>
       <p class="address">${address}</p>
+      <p onclick="remove(${index})"><i class="fa fa-trash"> Remove</i></a>
     </div>`;
+  console.log(index);
 
   $("#contact").after(contact);
 }
