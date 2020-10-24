@@ -13,7 +13,7 @@ function search() {
   // show the number of result
   $(".notify").remove();
   const message = `<span class='notify'><br />${indexArray.length} result(s) found.</span>`;
-  $("#search").after(message);
+  $("button.search").after(message);
 
   // display matching contact
   $(".searchResult").remove();
@@ -50,7 +50,8 @@ function displayResult(name, phone, address) {
       <h4 class="searchName">${name}</h4>
       <p class="searchPhone">${phone}</p>
       <p class="searchAddress">${address}</p>
-    </div>`;
+    </div>
+    <hr />`;
 
-  $("#search").after(contact);
+  $("button.search").after(contact);
 }

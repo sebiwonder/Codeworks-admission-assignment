@@ -18,11 +18,15 @@
 
     <!--Content that is dynamically displayed-->
     <div class="section" id="all">
-      <h3 id="contact">--- Your current contacts ---</h3>
+      <h3 id="contact">--- Your current contact ---</h3>
+      <div>
+        <p>You have <span id="numberContact">0</span> contact(s).</p>
+        <button onclick="navigate('add')">Add a new contact</button>
+      </div>
     </div>
 
     <div class="section" id="add">
-      <h3>--- Create a new contact ---</h3>
+      <h3>--- Create new contact ---</h3>
       <form action="">
         <label for="firstName" class="firstName">First name</label><br />
         <input type="text" name="firstName" id="firstName" /><br />
@@ -36,16 +40,16 @@
         <label for="address" class="address">Address</label><br />
         <input type="text" name="address" id="address" /><br />
       </form>
-      <button onclick="addContact()" id="add">Create new contact</button>
+      <button onclick="addContact()" class="add">Create new contact</button>
     </div>
 
     <div class="section" id="search">
-      <h3>--- Search for a contact ---</h3>
+      <h3>--- Search for contact ---</h3>
       <form action="">
         <label for="name">Search by first name and/or last name</label><br />
         <input type="text" name="name" id="name" /><br />
       </form>
-      <button onclick="search()" id="search">Search</button>
+      <button onclick="search()" class="search">Search</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

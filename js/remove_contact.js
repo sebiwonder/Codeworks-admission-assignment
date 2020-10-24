@@ -6,5 +6,7 @@ function remove(index) {
   if (confirmRemove) {
     const contact = `#contact-${index}`;
     $(contact).remove();
+
+    $("#numberContact")[0].innerHTML = $("div.card").length;
   }
 }
