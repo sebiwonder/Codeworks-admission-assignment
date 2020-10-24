@@ -88,8 +88,8 @@ function displayContact(firstName, lastName, phone, address) {
       <p class="phone" id="phone-${index}">${phone}</p>
       <p class="address" id="address-${index}">${address}</p>
       <p onclick="remove(${index})"><i class="fa fa-trash"> Remove</i></a>
-    </div>
-    <hr />`;
+      <hr />
+    </div>`;
 
   $("button.add").after(
     `<span class='success'><br /><i>Successfully create contact for ${name}.</i></span>`

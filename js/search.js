@@ -50,8 +50,8 @@ function displayResult(name, phone, address) {
       <h4 class="searchName">${name}</h4>
       <p class="searchPhone">${phone}</p>
       <p class="searchAddress">${address}</p>
-    </div>
-    <hr />`;
+      <hr />
+    </div>`;
 
   $("button.search").after(contact);
 }
