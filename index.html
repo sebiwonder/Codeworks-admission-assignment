@@ -6,50 +6,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <h1>Welcome to Thai's address book</h1>
 
-    <!--Navigation button-->
-    <p onclick="navigate('all')" class="all fa fa-user">&nbsp;All</p>
-    <p onclick="navigate('add')" class="add fa fa-plus">&nbsp;Add</p>
-    <p onclick="navigate('search')" class="search fa fa-search">&nbsp;Search</p>
+    <div class="grid-container">
+      <!--Navigation button-->
+      <p onclick="navigate('all')" class="all fa fa-user">&nbsp;All</p>
+      <p onclick="navigate('add')" class="add fa fa-plus">&nbsp;Add</p>
+      <p onclick="navigate('search')" class="search fa fa-search">
+        &nbsp;Search
+      </p>
 
-    <!--Content that is dynamically displayed-->
-    <div class="section" id="all">
-      <h3 id="contact">--- Your current contact ---</h3>
-      <div>
-        <p>You have <span id="numberContact">0</span> contact(s).</p>
-        <button onclick="navigate('add')">Add a new contact</button>
+      <!--Content that is dynamically displayed-->
+      <div class="section" id="all">
+        <h3>--- Your current contact ---</h3>
+        <div>
+          <p>You have <span id="numberContact">0</span> contact(s).</p>
+          <button onclick="navigate('add')">Add a new contact</button>
+        </div>
       </div>
-    </div>
 
-    <div class="section" id="add">
-      <h3>--- Create new contact ---</h3>
-      <form action="">
-        <label for="firstName" class="firstName">First name</label><br />
-        <input type="text" name="firstName" id="firstName" /><br />
+      <div class="section" id="add">
+        <h3>--- Create new contact ---</h3>
+        <form action="">
+          <label for="firstName" class="firstName">First name</label><br />
+          <input type="text" name="firstName" id="firstName" /><br />
 
-        <label for="lastName" class="lastName">Last name</label><br />
-        <input type="text" name="lastName" id="lastName" /><br />
+          <label for="lastName" class="lastName">Last name</label><br />
+          <input type="text" name="lastName" id="lastName" /><br />
 
-        <label for="phone" class="phone">Phone number</label><br />
-        <input type="number" name="phone" id="phone" /><br />
+          <label for="phone" class="phone">Phone number</label><br />
+          <input type="number" name="phone" id="phone" /><br />
 
-        <label for="address" class="address">Address</label><br />
-        <input type="text" name="address" id="address" /><br />
-      </form>
-      <button onclick="addContact()" class="add">Create new contact</button>
-    </div>
+          <label for="address" class="address">Address</label><br />
+          <input type="text" name="address" id="address" /><br />
+        </form>
+        <p></p>
+        <button onclick="addContact()" class="add">Create new contact</button>
+      </div>
 
-    <div class="section" id="search">
-      <h3>--- Search for contact ---</h3>
-      <form action="">
-        <label for="name">Search by first name and/or last name</label><br />
-        <input type="text" name="name" id="name" /><br />
-      </form>
-      <button onclick="search()" class="search">Search</button>
+      <div class="section" id="search">
+        <h3>--- Search for contact ---</h3>
+        <form action="">
+          <label for="name">Search by first name and/or last name</label><br />
+          <input type="text" name="name" id="name" /><br />
+        </form>
+        <p></p>
+        <button onclick="search()" class="search">Search</button>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

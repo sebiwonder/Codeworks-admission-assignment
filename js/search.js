@@ -13,7 +13,7 @@ function search() {
   // show the number of result
   $(".notify").remove();
   const message = `<span class='notify'><br />${indexArray.length} result(s) found.</span>`;
-  $("button.search").after(message);
+  $(".grid-container").after(message);
 
   // display matching contact
   $(".searchResult").remove();
@@ -47,10 +47,10 @@ function searchByRecursion(array, query, indexArray) {
 function displayResult(name, phone, address) {
   const contact = `
     <div class="searchResult">
+      <hr />
       <h4 class="searchName">${name}</h4>
       <p class="searchPhone">${phone}</p>
       <p class="searchAddress">${address}</p>
-      <hr />
     </div>`;
 
   $("button.search").after(contact);

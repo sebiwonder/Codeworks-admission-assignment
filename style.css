@@ -1,0 +1,72 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  justify-content: center;
+}
+
+.grid-container > p {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-container > p.all {
+  background-color: orange;
+  border: solid black;
+  border-width: 1px 0 1px 1px;
+  border-radius: 8px 0 0 0;
+}
+
+.grid-container > p.add {
+  background-color: mediumseagreen;
+  border: 1px solid black;
+}
+
+.grid-container > p.search {
+  background-color: lightcoral;
+  border: solid black;
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 8px 0 0;
+}
+
+.grid-container > div.section {
+  padding: 20px;
+  border: solid black;
+  border-width: 0 1px 1px 1px;
+  grid-column: 1 / span 3;
+  text-align: center;
+}
+
+.grid-container > #all {
+  background-color: orange;
+}
+
+.grid-container > #add {
+  background-color: mediumseagreen;
+}
+
+.grid-container > #search {
+  background-color: lightcoral;
+}
+
+span.notify,
+span.require,
+span.success {
+  display: table;
+  margin: 0 auto;
+}
+
+#contact {
+  margin-top: 20px;
+  height: 175px;
+  overflow: auto;
+}
